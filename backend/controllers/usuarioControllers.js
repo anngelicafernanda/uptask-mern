@@ -5,10 +5,10 @@ const registrar = async (req, res) => {
 	//Evitar registros duplicados
 	const { email } = req.body;
 	const existeUsuario = await Usuario.findOne({ email });
+
 	if (existeUsuario) {
 		const error = new Error('Usuario ya registrado');
 		return res.status(400).json({ msg: error.message });
-	} else {
 	}
 
 	try {
@@ -19,7 +19,8 @@ const registrar = async (req, res) => {
 	} catch (error) {
 		console.log('🚀  error:', error);
 	}
-	res.json({ msg: 'Creando Usuario' });
 };
 
-export { registrar };
+const autenticar = async (req, res) => {};
+
+export { registrar, autenticar };
