@@ -9,7 +9,7 @@ import {
 } from '../controllers/tareaController.js';
 import checkAuth from '../middleware/checkAuth.js';
 
-const router = express.Router;
+const router = express.Router();
 
 router.post('/', checkAuth, agregarTarea);
 
@@ -20,3 +20,5 @@ router
 	.delete(eliminarTarea);
 
 router.post('/estado/:id', cambiarEstado);
+
+export default router;
