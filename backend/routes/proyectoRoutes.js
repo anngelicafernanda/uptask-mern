@@ -8,7 +8,6 @@ import {
 	eliminarProyecto,
 	agregarColaborador,
 	eliminarColaborador,
-	obtenerTareas,
 } from '../controllers/proyectoController.js';
 
 import checkAuth from '../middleware/checkAuth.js';
