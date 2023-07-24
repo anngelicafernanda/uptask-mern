@@ -6,7 +6,6 @@ import Alerta from '../components/Alerta';
 const OlvidePassword = () => {
 	const [email, setEmail] = useState('');
 	const [alerta, setAlerta] = useState({});
-	console.log('🚀  email:', email);
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
